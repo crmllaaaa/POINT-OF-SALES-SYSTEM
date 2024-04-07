@@ -45,9 +45,11 @@ function calculateChange() {
     const total = parseInt(document.getElementById('total').textContent);
     const change = customerCash - total;
     if (change >= 0) {
-        alert(`Change: ${change} PHP\nThanks for your order! Saranghaeyo! `);
+        alert(`Change: ${change} PHP\nThanks for your order! Saranghaeyo!`);
+        location.reload();
     } else {
         alert('Insufficient cash!');
     }
 }
+
 
