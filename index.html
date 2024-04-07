@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Point of Sale</title>
+<link rel="stylesheet" href="style.css">
+<!-- Add font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>  
+
+    <div class="container">
+        <div class="menu-container">
+            <div class="menu-title">Menu</div>
+            <div class="menu-items">
+                <div class="item-container">
+                    <div>
+                        <img src="images/bibimbap.jpg" alt="Bibimbap" style="width: 100%;">
+                        <h4><b>Bibimbap</b><br><b>200  PHP</b></h4>
+                    </div>
+                    <input type="number" id="bibimbap-quantity" placeholder="Enter how many">
+                    <br>
+                    <button onclick="addToOrder('bibimpbap', 200 , 'bibimbap-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/bulgogi.jpg" alt="Bulgogi" style="width: 100%;">
+                        <h4><b>Bulgogi</b><br><b>250  PHP</b></h4>
+                    </div>
+                    <input type="number" id="bulgogi-quantity">
+                    <br>
+                    <button onclick="addToOrder('Bulgogi', 250 , 'bulgogi-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/gui.jpg" alt="Gui" style="width: 100%;">
+                        <h4><b>Gui</b><br><b>250  PHP</b></h4>
+                    </div>
+                    <input type="number" id="gui-quantity">
+                    <br>
+                    <button onclick="addToOrder('gui', 250, 'gui-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/hotteok.jpg" alt="Hotteok" style="width: 100%;">
+                        <h4><b>Hotteok</b><br><b>60 PHP</b></h4>
+                    </div>
+                    <input type="number" id="hotteok-quantity">
+                    <br>
+                    <button onclick="addToOrder('hotteok', 60, 'hotteok-quantity')">Add to order</button>
+                </div>
+                <br>
+                <div class="item-container">
+                    <div>
+                        <img src="images/japchae.jpg" alt="Japchae" style="width: 100%;">
+                        <h4><b>Japchae</b><br><b>200  PHP</b></h4>
+                    </div>
+                    <input type="number" id="japchae-quantity">
+                    <br>
+                    <button onclick="addToOrder('japchae', 200 , 'japchae-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/kimchi.jpg" alt="Kimchi" style="width: 100%;">
+                        <h4><b>Kimchi</b><br><b>100  PHP</b></h4>
+                    </div>
+                    <input type="number" id="kimchi-quantity">
+                    <br>
+                    <button onclick="addToOrder('kimchi', 100 , 'kimchi-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/Kimchi-Jjigae.jpg" alt="Kimchi-Jjigae" style="width: 100%;">
+                        <h4><b>Kimchi-Jjigae</b><br><b>250  PHP</b></h4>
+                    </div>
+                    <input type="number" id="kimchi-Jjigae-quantity">
+                    <br>
+                    <button onclick="addToOrder('kimchi-Jjigae', 250 , 'kimchi-Jjigae-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/korean chicken.jpg" alt="korean-chicken" style="width: 100%;">
+                        <h4><b>Korean Chicken</b><br><b>200  PHP</b></h4>
+                    </div>
+                    <input type="number" id="korean-chicken-quantity">
+                    <br>
+                    <button onclick="addToOrder('korean-chicken', 200 , 'korean-chicken-quantity')">Add to order</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="ordered-items-container">
+            <div class="ordered-items-title">Ordered Items</div>
+            <div class="ordered-item-container" id="order-details">
+                <!-- Cards will be added here dynamically -->
+            </div>
+            <div class="total-container">
+                <div>
+                    <b>Total:</b> <span id="total"></span><br>
+                    <input type="number" id="customer-cash" placeholder="Enter cash amount here"><br>
+                    <button onclick="calculateChange()">Pay!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
